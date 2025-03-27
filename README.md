@@ -17,6 +17,6 @@ If that does not work, you must remove the resource group (RG).
 
 ## Important: First, learn the deployment steps with 
 - size = "Standard_F1" # Free tier VM size
-## Then, for presentation and testing, replace the size with:
-- size = "Standard_B1s"  # Recommended tier for light workloads
+## Then, for development and testing, replace with a bigger size such as:
+- size = "Standard_B1s"  # Recommended tier for light workloads (budget: $5/month)
 
