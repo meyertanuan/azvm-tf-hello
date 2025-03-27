@@ -22,8 +22,9 @@ Follow the steps provided in the Hello NodeJs App document.
 - $ terraform validate
 - Expected: Success! The configuration is valid.
 - $ terraform plan
-- $ terraform apply –auto-approve
-- Expected: nodejs-app-rg with all associated resources is created.
+- $ terraform apply -auto-approve
+- Expected: Apply complete! Resources: 8 added, ...
+- * nodejs-app-rg with all associated resources is created.
 - Optional: visit http://portal.azure.com
 
 ### 2c. Transfer Setup Script
