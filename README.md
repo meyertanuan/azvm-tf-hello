@@ -6,7 +6,7 @@ Deploy a simple Node hello.js to Azure VM using Terraform
 - Terraform installed
 - Azure account with free tier access
 - SSH key generated (ssh-keygen -t rsa)
-  - Generated keys (id_rsa and id_rsa.pub) must exist in C:\Users\<username>\.ssh
+  - Generated keys (id_rsa and id_rsa.pub) must exist in C:/Users/<windows_username>/.ssh
   
 ## 2. Deployment Steps:
 
