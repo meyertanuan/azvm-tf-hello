@@ -13,8 +13,8 @@ Deploy a simple Node hello.js to Azure VM using Terraform
 Follow the steps provided in the Hello NodeJs App document. 
 
 ### 2a.	Azure CLI Authentication
-$ az login
-$ az account show
+- $ az login
+- $ az account show
 
 ### 2b. Terraform Deployment
 - $ cd terraform/
