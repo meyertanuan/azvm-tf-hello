@@ -24,7 +24,7 @@ Follow the steps provided in the Hello NodeJs App document.
 - $ terraform plan
 - $ terraform apply -auto-approve
 - Expected: Apply complete! Resources: 8 added, ...
-- * nodejs-app-rg with all associated resources is created.
+  * nodejs-app-rg with all associated resources is created.
 - Optional: visit http://portal.azure.com
 
 ### 2c. Transfer Setup Script
@@ -34,9 +34,9 @@ Follow the steps provided in the Hello NodeJs App document.
 - $ echo $VM_PUBLIC_IP
 - Sample result: 172.191.11.139
 
-- $ scp -i ~/.ssh/id_rsa scripts/setup.sh azureuser@$VM_PUBLIC_IP:~/setup.sh
+- $ "scp -i ~/.ssh/id_rsa scripts/setup.sh azureuser@$VM_PUBLIC_IP:~/setup.sh"
 
-- $ ssh -i ~/.ssh/id_rsa azureuser@$VM_PUBLIC_IP
+- $ "ssh -i ~/.ssh/id_rsa azureuser@$VM_PUBLIC_IP"
 
 - $ uname -a
 
@@ -44,11 +44,24 @@ Follow the steps provided in the Hello NodeJs App document.
 - $ sudo ~/setup.sh
 - Expected: hello.js is created in /opt/nodejs-app
 
-## 3. Access the Hello App
+## 3. Run and access the Hello App
 
+### 3a. Run the hello.js
+
+- $ cd /opt/nodejs-app
+- node hello.js
+
+- If the hello.js file is not as expected, create a new hello.js in $HOME directory
+
+### 3b. Access the app
 - Navigate to http://<VM_PUBLIC_IP>:3000
 
+## 4. destroy RG
+
+- $ terraform destroy
+
 ## WARNING: When done, always destroy resources.
+
 - If "terraform destroy" does not work, you must remove the resource group (RG) outside Terraform.
 - Azure CLI:
   - $ az group list --query "[].name"
