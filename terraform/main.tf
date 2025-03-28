@@ -100,6 +100,7 @@ resource "azurerm_linux_virtual_machine" "nodejs_vm" {
   resource_group_name   = azurerm_resource_group.nodejs_rg.name
   network_interface_ids = [azurerm_network_interface.nodejs_nic.id]
   size                  = "Standard_F1" # Free tier VM size
+  # size = "Standard_B1s" # for light workloads (budget: $5/month)
 
   os_disk {
     name                 = "nodejs-os-disk"

@@ -34,6 +34,9 @@ Follow the steps provided in the Hello NodeJs App document.
 - $ echo $VM_PUBLIC_IP
 - Sample result: 172.191.11.139
 
+- ping $VM_PUBLIC_IP
+  * Note: Wait for VM to be available before performing the next steps.
+
 - $ "scp -i ~/.ssh/id_rsa scripts/setup.sh azureuser@$VM_PUBLIC_IP:~/setup.sh"
 
 - $ "ssh -i ~/.ssh/id_rsa azureuser@$VM_PUBLIC_IP"
@@ -78,8 +81,10 @@ Follow the steps provided in the Hello NodeJs App document.
 - $ az group list --query "[].name"
 - Expected: should be EMPTY
 
-## First, learn the deployment steps with 
-- size = "Standard_F1" # Free tier VM size
-## Then, for development and testing, replace with a bigger size such as:
-- size = "Standard_B1s"  # Recommended tier for light workloads (budget: $5/month)
+## Changing Vm size in main.tf
 
+### First, learn the deployment steps with 
+- size = "Standard_F1" # Free tier VM size
+
+### Then, for development and testing, replace with a bigger size such as:
+- size = "Standard_B1s"  # Recommended tier for light workloads (budget: $5/month)
